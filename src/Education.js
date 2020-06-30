@@ -10,7 +10,7 @@ function Education(props) {
         {props.school}
       </header>
       {props.degree}
-      {props.startDate} - {props.endDate}
+      {props.year}
     </div>
   );
 }

@@ -10,6 +10,14 @@
             "StackName": "amplify-resumewebsite-dev-221406",
             "StackId": "arn:aws:cloudformation:us-east-1:859700905691:stack/amplify-resumewebsite-dev-221406/b08b8d10-ba7f-11ea-92c9-0ab6cdd0d422",
             "AmplifyAppId": "d1dmwzbiejzhh9"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1dmwzbiejzhh9",
+                    "type": "cicd"
+                }
+            }
         }
     }
 }
