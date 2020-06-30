@@ -1,19 +1,19 @@
-body {
-  background-color: black;
-  color: white
+:root {
+--rich-black-fogra-29: hsla(205, 89%, 15%, 1);
+--mint-cream: hsla(180, 4%, 96%, 1);
+--blue-munsell: hsla(190, 86%, 65%, 1);
+--st-patricks-blue: hsla(222, 93%, 53%, 1);
+--nickel: hsla(160, 5%, 44%, 1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background-color: var(--rich-black-fogra-29);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.sectionHeader {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 900;
+  border-bottom: white 1px solid;
 }
