@@ -3,6 +3,7 @@ export const personal = {
     phoneNumber: "903-574-5008",
     email: "ethan.a.bowen@gmail.com",
     whoAmI: "Passionate, driven, concept-focused technologist eager to create meaningful products that impact lives.",
+    yearsExperience: 8,
     social: {
         linkedIn: "https://www.linkedin.com/in/ethan-bowen-89115250/",
         gitHub: "https://github.com/ethanabowen",
@@ -41,11 +42,12 @@ export const skills = {
     ],
     backend: [
         { technology: "Java", proficiency: 10 },
-        { technology: "Spring Boot", proficiency: 10 },
+        { technology: "Spring", proficiency: 10 },
         { technology: "Eureka/Zuul", proficiency: 7 },
         { technology: "C#", proficiency: 8 },
         { technology: "C/C++", proficiency: 6 },
-        { technology: "PHP", proficiency: 8 }
+        { technology: "PHP", proficiency: 8 },
+        { technology: "Groovy", proficiency: 8 }
     ],
     storage: [
         { technology: "Dynamo", proficiency: 5 },
@@ -62,12 +64,20 @@ export const skills = {
         { technology: "CodeBuild", proficiency: 6 },
         { technology: "CodePipeline", proficiency: 6 },
         { technology: "Amplify", proficiency: 5 },
-        { technology: "Cloud Formation", proficiency: 6 }
+        { technology: "CF/CDK", proficiency: 6 }
     ],
     design: [
         { technology: "DDD", proficiency: 8 },
         { technology: "SOLID", proficiency: 9 },
-        { technology: "OOP", proficiency: 8 }
+        { technology: "OOP", proficiency: 8 },
+        { technology: "Clean Code", proficiency: 7 },
+        { technology: "Open Source", proficiency: 9 },
+        { technology: "Web Components", proficiency: 6 }
+    ],
+    analysis: [
+        { technology: "SonarQube", proficiency: 8 },
+        { technology: "Tableau", proficiency: 8 },
+        { technology: "QuickSight", proficiency: 7 }
     ],
     scripting: [
         { technology: "Python", proficiency: 7 },
@@ -76,6 +86,10 @@ export const skills = {
     "CI/CD": [
         { technology: "Jenkins", proficiency: 10 },
         { technology: "Gitlab", proficiency: 8 }
+    ],
+    OS: [
+        { technology: "Windows", proficiency: 8 },
+        { technology: "Unix", proficiency: 8 }
     ]
 }
 
@@ -186,6 +200,6 @@ export const jobs = {
 
 
 export const projects = [
-    "NASDAQ Stock ticker and article website.  Using plain js (website), NodeJs (api) and Python (for article/ticker scraping)",
+    "Created NASDAQ Stock ticker and article website using web-scraped data.",
     "Implementation of Support Vector Machine and creation of custom Kernel",
-    "Experiment with technologies to understand their place in the development ecosystem"]
+    "Constant experimentation with technologies to understand their place in the development ecosystem"]

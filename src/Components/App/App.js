@@ -14,7 +14,7 @@ function App() {
 
       <Personal {...personal} />
 
-      <div className="section-header">Education</div>
+      <div className="section-header-top">Education</div>
       <div className="row justify-content-center">
         {schools.map((school, index) => {
           return <School
@@ -23,25 +23,25 @@ function App() {
         })}
       </div>
 
-      <div className="section-header justify-content-center mt-5">Tech Skills</div>
+      <div className="section-header justify-content-center">Tech Skills</div>
       <div className="row justify-content-center">
         <Skills skills={skills} />
       </div>
 
-      <div className="section-header mt-5">Experience</div>
+      <div className="section-header">Experience ({personal.yearsExperience}+ years)</div>
       <div className="row justify-content-center">
         <Jobs jobs={jobs} />
       </div>
 
-      <div className="section-header mt-5">Projects</div>
-      <div className="row justify-content-center">
+      <div className="section-header">Projects</div>
+      <div className="row justify-content-center very-bottom-margin">
         <ul className="col-9">
           {projects.map((project, index) => {
             return <li key={"project" + index} >{project}</li>
           })}
         </ul>
       </div>
-    </div >
+    </div>
   );
 }
 

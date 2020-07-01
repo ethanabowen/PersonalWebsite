@@ -2,16 +2,19 @@ body {
   background-color: whitesmoke;
 }
 
-a {
-  color: grey;
+.section-header-top {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
 }
+
 
 .section-header {
   text-align: center;
   font-size: 30px;
   font-weight: 900;
-  /*border-bottom: black 1px solid;*/
-}
+  margin-top: 100px;
+ }
 
 .divider {
   border-bottom: grey 1px solid;
@@ -19,4 +22,8 @@ a {
 
 .techdomain {
   text-transform: capitalize;
+}
+
+.very-bottom-margin {
+  margin-bottom: 185px;
 }
