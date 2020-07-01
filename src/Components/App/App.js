@@ -4,7 +4,7 @@ import './App.css';
 import Personal from '../Personal/Personal';
 import School from '../School/School';
 import Jobs from '../Jobs/Jobs';
-import Skills from '../Skills/Skills';
+import Skills from '../Skills/Skills';  
 
 import { welcome, personal, schools, jobs, skills, projects } from '../../Constants.js';
 
@@ -16,7 +16,7 @@ function App() {
 
       <Personal {...personal} />
 
-      <div className="section-header-top">Education</div>
+      <div className="section-header">Education</div>
       <div className="row justify-content-center">
         {schools.map((school, index) => {
           return <School
