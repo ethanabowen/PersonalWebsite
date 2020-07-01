@@ -1,11 +1,10 @@
 import React from 'react'
-import '../bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
-import Personal from './Components/Personal';
-import School from './Components/School';
-import Job from './Components/Job';
-import Skills from './Components/Skills';
+import Personal from '../Personal/Personal';
+import School from '../School/School';
+import Job from '../Job/Job';
+import Skills from '../Skills/Skills';
 
 import { personal, schools, jobs, skills, projects } from '../../Constants.js';
 
