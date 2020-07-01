@@ -24,7 +24,6 @@ function Jobs(props) {
   return Object.keys(props.jobs).map(jobName => {
     return props.jobs[jobName]
       .map((job, index) => {
-        console.log(props.jobs[jobName].length, index);
         return job.title === 'Intern' ?
           <div key={"intern" + index} />
           : <Job

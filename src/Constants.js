@@ -1,3 +1,5 @@
+export const welcome = "Thanks for checking out my site! I used AWS Amplify to help build it.  Right now the page is using local static data, it will soon be using AWS API Gateway/Lamda/S3!"
+
 export const personal = {
     name: "Ethan Bowen",
     phoneNumber: "903-574-5008",
@@ -26,19 +28,20 @@ export const schools = [
 
 export const skills = {
     frontend: [
-        { technology: "Angular", proficiency: 6 },
+        { technology: "Angular", proficiency: 5 },
         { technology: "Javascript", proficiency: 8 },
         { technology: "React", proficiency: 8 },
         { technology: "Node", proficiency: 5 },
         { technology: "Bootstrap", proficiency: 7 },
-        { technology: "CSS", proficiency: 7 }
+        { technology: "CSS", proficiency: 7 },
+        { technology: "SCSS", proficiency: 5 }
     ],
     communication: [
         { technology: "REST", proficiency: 10 },
         { technology: "SOAP", proficiency: 8 },
         { technology: "RabbitMQ", proficiency: 9 },
-        { technology: "WebSphere", proficiency: 7 },
-        { technology: "JMS", proficiency: 10 }
+        { technology: "WebSphere", proficiency: 5 },
+        { technology: "JMS", proficiency: 7 }
     ],
     backend: [
         { technology: "Java", proficiency: 10 },
@@ -64,7 +67,9 @@ export const skills = {
         { technology: "CodeBuild", proficiency: 6 },
         { technology: "CodePipeline", proficiency: 6 },
         { technology: "Amplify", proficiency: 5 },
-        { technology: "CF/CDK", proficiency: 6 }
+        { technology: "CF/CDK", proficiency: 6 },
+        { technology: "API Gateway", proficiency: 5 },
+        { technology: "Lambda", proficiency: 6 }
     ],
     design: [
         { technology: "DDD", proficiency: 8 },
@@ -72,7 +77,7 @@ export const skills = {
         { technology: "OOP", proficiency: 8 },
         { technology: "Clean Code", proficiency: 7 },
         { technology: "Open Source", proficiency: 9 },
-        { technology: "Web Components", proficiency: 6 }
+        { technology: "Web CDD", proficiency: 6 }
     ],
     analysis: [
         { technology: "SonarQube", proficiency: 8 },
@@ -90,6 +95,10 @@ export const skills = {
     OS: [
         { technology: "Windows", proficiency: 8 },
         { technology: "Unix", proficiency: 8 }
+    ],
+    "IaC": [
+        { technology: "Serverless", proficiency: 5 },
+        { technology: "Terraform", proficiency: 5 }
     ]
 }
 
@@ -198,8 +207,7 @@ export const jobs = {
     ]
 }
 
-
 export const projects = [
-    "Created NASDAQ Stock ticker and article website using web-scraped data.",
+    "Created website that displays the latest news on every NASDAQ Stock ticker using web-scraped data.",
     "Implementation of Support Vector Machine and creation of custom Kernel",
     "Constant experimentation with technologies to understand their place in the development ecosystem"]

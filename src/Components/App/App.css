@@ -8,6 +8,9 @@ body {
   font-weight: 900;
 }
 
+a{
+  color: cadetblue
+}
 
 .section-header {
   text-align: center;

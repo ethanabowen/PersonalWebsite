@@ -6,9 +6,11 @@ import School from '../School/School';
 import Jobs from '../Jobs/Jobs';
 import Skills from '../Skills/Skills';
 
-import { personal, schools, jobs, skills, projects } from '../../Constants.js';
+import { welcome, personal, schools, jobs, skills, projects } from '../../Constants.js';
 
 function App() {
+  console.log(welcome);
+
   return (
     <div className="container">
 
