@@ -34,15 +34,14 @@ export const skills = {
         { technology: "Node", proficiency: 5 },
         { technology: "Bootstrap", proficiency: 7 },
         { technology: "CSS", proficiency: 7 },
-        { technology: "SCSS", proficiency: 5 }
+        { technology: "SCSS", proficiency: 5 }    
     ],
-    communication: [
-        { technology: "REST", proficiency: 10 },
-        { technology: "SOAP", proficiency: 8 },
-        { technology: "RabbitMQ", proficiency: 9 },
-        { technology: "WebSphere", proficiency: 5 },
-        { technology: "JMS", proficiency: 7 }
-    ],
+    /*"Frontend Library": [
+        { technology: "RapiDoc", proficiency: 10  },
+        { technology: "D3", proficiency: 6 },
+        { technology: "Gulp", proficiency: 7 },
+        { technology: "Kendo", proficiency: 5 }
+    ],*/
     backend: [
         { technology: "Java", proficiency: 10 },
         { technology: "Spring", proficiency: 10 },
@@ -51,13 +50,6 @@ export const skills = {
         { technology: "C/C++", proficiency: 6 },
         { technology: "PHP", proficiency: 8 },
         { technology: "Groovy", proficiency: 8 }
-    ],
-    storage: [
-        { technology: "Dynamo", proficiency: 5 },
-        { technology: "MySql", proficiency: 5 },
-        { technology: "DB2", proficiency: 5 },
-        { technology: "Heidi", proficiency: 5 },
-        { technology: "Mongo", proficiency: 5 },
     ],
     AWS: [
         { technology: "IAM", proficiency: 8 },
@@ -71,13 +63,26 @@ export const skills = {
         { technology: "API Gateway", proficiency: 5 },
         { technology: "Lambda", proficiency: 6 }
     ],
+    communication: [
+        { technology: "REST", proficiency: 10 },
+        { technology: "SOAP", proficiency: 8 },
+        { technology: "RabbitMQ", proficiency: 9 },
+        { technology: "WebSphere", proficiency: 5 },
+        { technology: "JMS", proficiency: 7 }
+    ],
+    storage: [
+        { technology: "Dynamo", proficiency: 5 },
+        { technology: "MySql", proficiency: 5 },
+        { technology: "DB2", proficiency: 5 },
+        { technology: "Heidi", proficiency: 5 },
+        { technology: "Mongo", proficiency: 5 },
+    ],
     design: [
         { technology: "DDD", proficiency: 8 },
         { technology: "SOLID", proficiency: 9 },
         { technology: "OOP", proficiency: 8 },
         { technology: "Clean Code", proficiency: 7 },
-        { technology: "Open Source", proficiency: 9 },
-        { technology: "Web CDD", proficiency: 6 }
+        { technology: "Web CDD", proficiency: 6 },
     ],
     analysis: [
         { technology: "SonarQube", proficiency: 8 },
@@ -86,7 +91,7 @@ export const skills = {
     ],
     scripting: [
         { technology: "Python", proficiency: 7 },
-        { technology: "Bash/Sheel", proficiency: 9 }
+        { technology: "Bash/Shell", proficiency: 9 }
     ],
     "CI/CD": [
         { technology: "Jenkins", proficiency: 10 },
