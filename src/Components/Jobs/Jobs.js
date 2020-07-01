@@ -19,7 +19,6 @@ function getIcon(icon) {
   return faIcon;
 }
 
-
 function Jobs(props) {
   return Object.keys(props.jobs).map(jobName => {
     return props.jobs[jobName]

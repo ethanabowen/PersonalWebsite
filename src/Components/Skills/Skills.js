@@ -20,7 +20,6 @@ function Skills(props) {
   });
 }
 
-
 function Skill(props) {
   return (
 
