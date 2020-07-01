@@ -1,14 +1,13 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.css';
+import '../bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
-import Personal from './Personal';
-import School from './School';
-import Job from './Job';
-import Skills from './Skills';
+import Personal from './Components/Personal';
+import School from './Components/School';
+import Job from './Components/Job';
+import Skills from './Components/Skills';
 
-import { personal, schools, jobs, skills, projects } from './Constants.js';
-
+import { personal, schools, jobs, skills, projects } from '../../Constants.js';
 
 function App() {
   return (
@@ -34,12 +33,14 @@ function App() {
 
       <div className="section-header mt-5 mb-2">Experience</div>
       <div className="row justify-content-center">
-        {jobs.map((job, index) => {          
-          return job.title == 'Intern'? <></> :<Job
-            key={job.company + index}
-            className="col-sm-10 col-xs-12"
-            {...job}
-          />;
+        {jobs.map((job, index) => {
+          return job.title == 'Intern' ?
+            <></> :
+            <Job
+              key={job.company + index}
+              className="col-sm-10 col-xs-12"
+              {...job}
+            />;
         })}
       </div>
 

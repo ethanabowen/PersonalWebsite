@@ -1,11 +1,3 @@
-:root {
-  --rich-black-fogra-29: hsla(205, 89%, 15%, 1);
-  --mint-cream: hsla(180, 4%, 96%, 1);
-  --blue-munsell: hsla(190, 86%, 65%, 1);
-  --st-patricks-blue: hsla(222, 93%, 53%, 1);
-  --nickel: hsla(160, 5%, 44%, 1);
-}
-
 body {
   background-color: whitesmoke;
 }
