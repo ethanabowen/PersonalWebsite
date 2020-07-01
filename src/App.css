@@ -1,19 +1,30 @@
 :root {
---rich-black-fogra-29: hsla(205, 89%, 15%, 1);
---mint-cream: hsla(180, 4%, 96%, 1);
---blue-munsell: hsla(190, 86%, 65%, 1);
---st-patricks-blue: hsla(222, 93%, 53%, 1);
---nickel: hsla(160, 5%, 44%, 1);
+  --rich-black-fogra-29: hsla(205, 89%, 15%, 1);
+  --mint-cream: hsla(180, 4%, 96%, 1);
+  --blue-munsell: hsla(190, 86%, 65%, 1);
+  --st-patricks-blue: hsla(222, 93%, 53%, 1);
+  --nickel: hsla(160, 5%, 44%, 1);
 }
 
 body {
-  background-color: var(--rich-black-fogra-29);
-  color: white;
+  background-color: whitesmoke;
 }
 
-.sectionHeader {
+a {
+  color: grey;
+}
+
+.section-header {
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 900;
   border-bottom: white 1px solid;
+}
+
+.divider {
+  border-bottom: grey 1px solid;
+}
+
+.techdomain {
+  text-transform: capitalize;
 }

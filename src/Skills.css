@@ -1,0 +1,12 @@
+.techdomain {
+    font-size: 30px;
+}
+
+.proficiency-bar {
+    background-color: cadetblue;
+    color:whitesmoke
+}
+
+.proficiency-bar-nil {
+    background-color: lightgrey;
+}

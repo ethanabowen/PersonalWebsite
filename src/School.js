@@ -1,14 +1,13 @@
 import React from 'react';
-import './Education.css';
+import './School.css';
 
-function Education(props) {
+function School(props) {
   return (
     <div className={props.className}>
       <div>{props.school} - { props.year }</div>
-      
       <div>{ props.degree }</div>
     </div >
   );
 }
 
-export default Education;
+export default School;
