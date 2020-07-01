@@ -4,14 +4,16 @@ import './Skills.css';
 function Skills(props) {
   return Object.keys(props.skills).map(techDomain => {
     return (
-      <div key={techDomain} className="col-4 mx-auto">
+      <div key={techDomain} className="col-lg-4 col-md-6 col-sm-12 ">
         <div className="techdomain">{techDomain}</div>
-        {props.skills[techDomain].sort((a, b) => a.proficiency > b.proficiency ? -1 : 1).map((skill, index) => {
-          return <Skill
-            key={skill.technology + index}
-            {...skill}
-          />
-        })}
+        {props.skills[techDomain]
+          .sort((a, b) => a.proficiency > b.proficiency ? -1 : 1)
+          .map((skill, index) => {
+            return <Skill
+              key={skill.technology + index}
+              {...skill}
+            />
+          })}
       </div>
     );
 

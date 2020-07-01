@@ -3,7 +3,7 @@ import './App.css';
 
 import Personal from '../Personal/Personal';
 import School from '../School/School';
-import Job from '../Job/Job';
+import Jobs from '../Jobs/Jobs';
 import Skills from '../Skills/Skills';
 
 import { personal, schools, jobs, skills, projects } from '../../Constants.js';
@@ -19,33 +19,23 @@ function App() {
         {schools.map((school, index) => {
           return <School
             key={school.school + index}
-            className="col-sm-6 col-xs-12"
             {...school} />;
         })}
       </div>
 
-
-      <div className="section-header justify-content-center mt-5 mb-2">Tech Skills</div>
-      <div className="row">
+      <div className="section-header justify-content-center mt-5">Tech Skills</div>
+      <div className="row justify-content-center">
         <Skills skills={skills} />
       </div>
 
-      <div className="section-header mt-5 mb-2">Experience</div>
+      <div className="section-header mt-5">Experience</div>
       <div className="row justify-content-center">
-        {jobs.map((job, index) => {
-          return job.title == 'Intern' ?
-            <></> :
-            <Job
-              key={job.company + index}
-              className="col-sm-10 col-xs-12"
-              {...job}
-            />;
-        })}
+        <Jobs jobs={jobs} />
       </div>
 
-      <div className="section-header mt-5 mb-2">Projects</div>
+      <div className="section-header mt-5">Projects</div>
       <div className="row justify-content-center">
-        <ul>
+        <ul className="col-9">
           {projects.map((project, index) => {
             return <li key={"project" + index} >{project}</li>
           })}

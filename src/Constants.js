@@ -13,20 +13,18 @@ export const personal = {
 export const schools = [
     {
         school: "Texas Tech University",
-        seal: "https://www.ttu.edu/traditions/images/SEAL.jpg",
         degree: "Bachelor's of Science in Computer Science",
         year: 2012
     },
     {
         school: "University of Texas at Arlington",
-        seal: "https://www.uta.edu/ucomm/identity/pix/UTA-color-seal.jpg",
         degree: "Master’s of Science in Computer Science",
         year: 2016
     }
 ]
 
 export const skills = {
-    "frontend": [
+    frontend: [
         { technology: "Angular", proficiency: 6 },
         { technology: "Javascript", proficiency: 8 },
         { technology: "React", proficiency: 8 },
@@ -34,14 +32,14 @@ export const skills = {
         { technology: "Bootstrap", proficiency: 7 },
         { technology: "CSS", proficiency: 7 }
     ],
-    "communication": [
+    communication: [
         { technology: "REST", proficiency: 10 },
         { technology: "SOAP", proficiency: 8 },
         { technology: "RabbitMQ", proficiency: 9 },
-        { technology: "WebSphereMQ", proficiency: 7 },
+        { technology: "WebSphere", proficiency: 7 },
         { technology: "JMS", proficiency: 10 }
     ],
-    "backend": [
+    backend: [
         { technology: "Java", proficiency: 10 },
         { technology: "Spring Boot", proficiency: 10 },
         { technology: "Eureka/Zuul", proficiency: 7 },
@@ -49,61 +47,68 @@ export const skills = {
         { technology: "C/C++", proficiency: 6 },
         { technology: "PHP", proficiency: 8 }
     ],
-    "storage": [
+    storage: [
         { technology: "Dynamo", proficiency: 5 },
         { technology: "MySql", proficiency: 5 },
         { technology: "DB2", proficiency: 5 },
         { technology: "Heidi", proficiency: 5 },
         { technology: "Mongo", proficiency: 5 },
     ],
-    "scripting": [
+    AWS: [
+        { technology: "IAM", proficiency: 8 },
+        { technology: "S3", proficiency: 10 },
+        { technology: "Cognito", proficiency: 8 },
+        { technology: "EC2", proficiency: 5 },
+        { technology: "CodeBuild", proficiency: 6 },
+        { technology: "CodePipeline", proficiency: 6 },
+        { technology: "Amplify", proficiency: 5 },
+        { technology: "Cloud Formation", proficiency: 6 }
+    ],
+    design: [
+        { technology: "DDD", proficiency: 8 },
+        { technology: "SOLID", proficiency: 9 },
+        { technology: "OOP", proficiency: 8 }
+    ],
+    scripting: [
         { technology: "Python", proficiency: 7 },
         { technology: "Bash/Sheel", proficiency: 9 }
     ],
     "CI/CD": [
         { technology: "Jenkins", proficiency: 10 },
-        { technology: "Gitlab", proficiency: 8 },
-        { technology: "CodeBuild", proficiency: 6 },
-        { technology: "CodePipeline", proficiency: 6 }
-    ],
-    "AWS": [
-        { technology: "IAM", proficiency: 7 },
-        { technology: "", proficiency: 7 },
-        { technology: "AWS", proficiency: 7 },
-        { technology: "AWS", proficiency: 7 },
-        { technology: "Quicksight", proficiency: 6 },
-        { technology: "Amplify", proficiency: 5 }
+        { technology: "Gitlab", proficiency: 8 }
     ]
 }
 
-export const jobs = [
-    {
-        company: "CBORD",
-        title: "Advisory Software Engineer",
-        startDate: "03/2020",
-        endDate: "Present",
-        details: [
-            "Served as technical lead on company wide Hub integration project",
-            "Integrated AWS services such as functions, storage, and authentication throughout CBORD",
-            "Introduced and harnessed IaC with Serverless and Terraform",
-        ],
-        site: "https://www.cbord.com/",
-        icon: "university"
-    },
-    {
-        company: "CBORD",
-        title: "Software Engineer",
-        startDate: "04/2019",
-        endDate: "03/2020",
-        details: [
-            "Led external team members daily on technical and domain-specific topics",
-            "Initiated several projects and proof of concepts in an effort to push the team forward",
-            "Developed React webpages for CSGold's web migration"
-        ],
-        site: "https://www.cbord.com/",
-        icon: "university"
-    },
-    {
+export const jobs = {
+    CBORD: [
+        {
+            company: "CBORD",
+            title: "Advisory Software Engineer",
+            startDate: "03/2020",
+            endDate: "Present",
+            details: [
+                "Served as technical lead on company wide Hub integration project",
+                "Integrated AWS services such as functions, storage, and authentication throughout CBORD",
+                "Introduced and harnessed IaC with Serverless and Terraform",
+            ],
+            site: "https://www.cbord.com/",
+            icon: "university"
+        },
+        {
+            company: "CBORD",
+            title: "Software Engineer",
+            startDate: "04/2019",
+            endDate: "03/2020",
+            details: [
+                "Led external team members daily on technical and domain-specific topics",
+                "Initiated several projects and proof of concepts in an effort to push the team forward",
+                "Developed React webpages for CSGold's web migration"
+            ],
+            site: "https://www.cbord.com/",
+            icon: "university"
+        }
+    ],
+    lockheedMartin: [{
         company: "Lockheed Martin - Skunkworks",
         title: "Software Engineer III",
         startDate: "09/2018",
@@ -115,8 +120,8 @@ export const jobs = [
         ],
         site: "https://www.lockheedmartin.com/en-us/who-we-are/business-areas/aeronautics/skunkworks.html",
         icon: "fighter-jet"
-    },
-    {
+    }],
+    pier1: [{
         company: "Pier 1 Imports",
         title: "Software Engineer II",
         startDate: "04/2016",
@@ -128,8 +133,8 @@ export const jobs = [
         ],
         site: "https://www.cbord.com/",
         icon: "store"
-    },
-    {
+    }],
+    bnsf: [{
         company: "BNSF Railway",
         title: "Software Developer II",
         startDate: "09/2012",
@@ -141,8 +146,8 @@ export const jobs = [
         ],
         site: "https://www.bnsf.com/",
         icon: "train"
-    },
-    {
+    }],
+    rtl: [{
         company: "RTL Genomics",
         title: "Intern",
         startDate: "11/2011",
@@ -153,8 +158,8 @@ export const jobs = [
         ],
         site: "https://rtlgenomics.com/",
         icon: "dna"
-    },
-    {
+    }],
+    halliburton: [{
         company: "Halliburton",
         title: "Intern",
         startDate: "06/2011",
@@ -164,8 +169,8 @@ export const jobs = [
             "Familiarized selfwith FORTRAN and VisualBasic and embedded DLLs into other languages"
         ],
         site: "https://www.halliburton.com/"
-    },
-    {
+    }],
+    motio: [{
         company: "Motio Inc",
         title: "Intern",
         startDate: "05/2010",
@@ -176,7 +181,8 @@ export const jobs = [
         ],
         site: "https://motio.com/"
     }
-]
+    ]
+}
 
 
 export const projects = [

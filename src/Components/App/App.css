@@ -10,7 +10,7 @@ a {
   text-align: center;
   font-size: 30px;
   font-weight: 900;
-  border-bottom: white 1px solid;
+  /*border-bottom: black 1px solid;*/
 }
 
 .divider {
