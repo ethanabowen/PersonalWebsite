@@ -1,0 +1,28 @@
+body {
+  background-color: whitesmoke;
+}
+
+a {
+  color: cadetblue
+}
+
+.section-header {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+  margin-top: 100px;
+}
+
+.divider {
+  border-bottom: grey 1px solid;
+}
+
+.techdomain {
+  text-transform: capitalize;
+}
+
+/* This bottom margins ensures the resume will
+ print with a solid colors background for 2 pages*/
+.very-bottom-margin {
+  margin-bottom: 540px;
+}

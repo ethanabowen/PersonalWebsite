@@ -34,7 +34,7 @@ export const skills = {
         { technology: "Node", proficiency: 5 },
         { technology: "Bootstrap", proficiency: 7 },
         { technology: "CSS", proficiency: 7 },
-        { technology: "SCSS", proficiency: 5 }    
+        { technology: "SCSS", proficiency: 5 }
     ],
     /*"Frontend Library": [
         { technology: "RapiDoc", proficiency: 10  },
@@ -63,6 +63,13 @@ export const skills = {
         { technology: "API Gateway", proficiency: 5 },
         { technology: "Lambda", proficiency: 6 }
     ],
+    design: [
+        { technology: "DDD", proficiency: 8 },
+        { technology: "SOLID", proficiency: 9 },
+        { technology: "OOP", proficiency: 8 },
+        { technology: "Clean Code", proficiency: 7 },
+        { technology: "Web CDD", proficiency: 6 },
+    ],
     communication: [
         { technology: "REST", proficiency: 10 },
         { technology: "SOAP", proficiency: 8 },
@@ -76,13 +83,6 @@ export const skills = {
         { technology: "DB2", proficiency: 5 },
         { technology: "Heidi", proficiency: 5 },
         { technology: "Mongo", proficiency: 5 },
-    ],
-    design: [
-        { technology: "DDD", proficiency: 8 },
-        { technology: "SOLID", proficiency: 9 },
-        { technology: "OOP", proficiency: 8 },
-        { technology: "Clean Code", proficiency: 7 },
-        { technology: "Web CDD", proficiency: 6 },
     ],
     analysis: [
         { technology: "SonarQube", proficiency: 8 },

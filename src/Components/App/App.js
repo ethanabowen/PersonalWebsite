@@ -1,48 +1,42 @@
 import React from 'react'
+import { Switch, Route, Link } from "react-router-dom";
+
 import './App.css';
+import { Navbar, Nav } from 'react-bootstrap';
 
-import Personal from '../Personal/Personal';
-import School from '../School/School';
-import Jobs from '../Jobs/Jobs';
-import Skills from '../Skills/Skills';  
-
-import { welcome, personal, schools, jobs, skills, projects } from '../../Constants.js';
+import Resume from '../Resume/Resume';
+import Projects from '../Projects/Projects';
+import { welcome } from '../../Constants.js';
 
 function App() {
   console.log(welcome);
 
   return (
     <div className="container">
+      <Navbar expand="lg">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="m-auto">
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="/resume">Resume</Nav.Link>
+            <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
 
-      <Personal {...personal} />
-
-      <div className="section-header">Education</div>
-      <div className="row justify-content-center">
-        {schools.map((school, index) => {
-          return <School
-            key={school.school + index}
-            {...school} />;
-        })}
-      </div>
-
-      <div className="section-header justify-content-center">Tech Skills</div>
-      <div className="row justify-content-center">
-        <Skills skills={skills} />
-      </div>
-
-      <div className="section-header">Experience ({personal.yearsExperience}+ years)</div>
-      <div className="row justify-content-center">
-        <Jobs jobs={jobs} />
-      </div>
-
-      <div className="section-header">Projects</div>
-      <div className="row justify-content-center very-bottom-margin">
-        <ul className="col-9">
-          {projects.map((project, index) => {
-            return <li key={"project" + index} >{project}</li>
-          })}
-        </ul>
-      </div>
+      {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+      <Switch>
+        <Route path="/resume">
+          <Resume />
+        </Route>
+        <Route path="/projects">
+          <Projects />
+        </Route>
+        <Route path="/">
+          <Resume />
+        </Route>
+      </Switch>
     </div>
   );
 }

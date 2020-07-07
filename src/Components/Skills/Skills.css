@@ -1,10 +1,15 @@
 .techdomain {
     font-size: 30px;
+    text-decoration: underline;
+}
+
+.skill-center-horizontally {
+    margin: 0 auto;
 }
 
 .proficiency-bar {
     background-color: cadetblue;
-    color:whitesmoke
+    color: whitesmoke
 }
 
 .proficiency-bar:hover {

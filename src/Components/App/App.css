@@ -5,22 +5,3 @@ body {
 a{
   color: cadetblue
 }
-
-.section-header {
-  text-align: center;
-  font-size: 30px;
-  font-weight: 900;
-  margin-top: 100px;
- }
-
-.divider {
-  border-bottom: grey 1px solid;
-}
-
-.techdomain {
-  text-transform: capitalize;
-}
-
-.very-bottom-margin {
-  margin-bottom: 185px;
-}
