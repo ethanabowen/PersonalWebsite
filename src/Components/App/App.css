@@ -2,6 +2,14 @@ body {
   background-color: whitesmoke;
 }
 
-a{
+a {
   color: cadetblue
+}
+
+.nav-link {
+  color: cadetblue !important
+}
+
+.nav-link:hover {
+  text-decoration: underline;
 }
