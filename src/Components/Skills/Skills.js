@@ -24,8 +24,8 @@ function Skill(props) {
   //scaled to 12 for bootstrap
   //const proficiency = Math.floor(12 * props.proficiency / 10);
   return (
-    <div className="row ">
-      <div className="col-4 pl-4">
+    <div className="col-auto">
+      <div className="pl-4">
       <span>{props.technology}</span>
       </div>
       {/*

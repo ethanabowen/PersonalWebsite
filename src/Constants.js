@@ -5,7 +5,7 @@ export const personal = {
     phoneNumber: "903-574-5008",
     email: "ethan.a.bowen@gmail.com",
     whoAmI: "Passionate, driven, concept-focused technologist eager to create meaningful products that impact lives.",
-    yearsExperience: 8,
+    yearsExperience: 9,
     social: {
         linkedIn: "https://www.linkedin.com/in/ethan-bowen-89115250/",
         gitHub: "https://github.com/ethanabowen",
@@ -27,6 +27,29 @@ export const schools = [
 ]
 
 export const skills = {
+    AWS: [
+        { technology: "IAM", proficiency: 8 },
+        { technology: "S3", proficiency: 10 },
+        { technology: "Cognito", proficiency: 8 },
+        { technology: "EC2", proficiency: 5 },
+        { technology: "CodeBuild", proficiency: 6 },
+        { technology: "CodePipeline", proficiency: 6 },
+        { technology: "Amplify", proficiency: 5 },
+        { technology: "CF/CDK", proficiency: 6 },
+        { technology: "API Gateway", proficiency: 5 },
+        { technology: "Lambda", proficiency: 6 },
+        { technology: "Athena", proficiency: 7 },
+        { technology: "Glue", proficiency: 7 }
+    ],
+    backend: [
+        { technology: "Java", proficiency: 10 },
+        { technology: "Spring", proficiency: 10 },
+        { technology: "Eureka/Zuul", proficiency: 7 },
+        { technology: "C#", proficiency: 8 },
+        { technology: "C/C++", proficiency: 6 },
+        { technology: "PHP", proficiency: 8 },
+        { technology: "Groovy", proficiency: 8 }
+    ],
     frontend: [
         { technology: "Angular", proficiency: 5 },
         { technology: "Javascript", proficiency: 8 },
@@ -42,27 +65,6 @@ export const skills = {
         { technology: "Gulp", proficiency: 7 },
         { technology: "Kendo", proficiency: 5 }
     ],*/
-    backend: [
-        { technology: "Java", proficiency: 10 },
-        { technology: "Spring", proficiency: 10 },
-        { technology: "Eureka/Zuul", proficiency: 7 },
-        { technology: "C#", proficiency: 8 },
-        { technology: "C/C++", proficiency: 6 },
-        { technology: "PHP", proficiency: 8 },
-        { technology: "Groovy", proficiency: 8 }
-    ],
-    AWS: [
-        { technology: "IAM", proficiency: 8 },
-        { technology: "S3", proficiency: 10 },
-        { technology: "Cognito", proficiency: 8 },
-        { technology: "EC2", proficiency: 5 },
-        { technology: "CodeBuild", proficiency: 6 },
-        { technology: "CodePipeline", proficiency: 6 },
-        { technology: "Amplify", proficiency: 5 },
-        { technology: "CF/CDK", proficiency: 6 },
-        { technology: "API Gateway", proficiency: 5 },
-        { technology: "Lambda", proficiency: 6 }
-    ],
     design: [
         { technology: "DDD", proficiency: 8 },
         { technology: "SOLID", proficiency: 9 },
@@ -78,7 +80,7 @@ export const skills = {
         { technology: "JMS", proficiency: 7 }
     ],
     storage: [
-        { technology: "Dynamo", proficiency: 5 },
+        { technology: "Dynamo", proficiency: 6 },
         { technology: "MySql", proficiency: 5 },
         { technology: "DB2", proficiency: 5 },
         { technology: "Heidi", proficiency: 5 },
@@ -87,7 +89,7 @@ export const skills = {
     analysis: [
         { technology: "SonarQube", proficiency: 8 },
         { technology: "Tableau", proficiency: 8 },
-        { technology: "QuickSight", proficiency: 7 }
+        { technology: "AWS QuickSight", proficiency: 10 }
     ],
     scripting: [
         { technology: "Python", proficiency: 7 },
@@ -107,6 +109,11 @@ export const skills = {
     ]
 }
 
+export const softSkills = [
+    "2+ years of technical leadership on multiple projects",
+    "Initiated knowledge sharing sessions on multiple teams"
+]
+
 export const jobs = {
     CBORD: [
         {
@@ -115,9 +122,10 @@ export const jobs = {
             startDate: "03/2020",
             endDate: "Present",
             details: [
-                "Served as technical lead on company wide Hub integration project",
-                "Integrated AWS services such as functions, storage, and authentication throughout CBORD",
-                "Introduced and harnessed IaC with Serverless and Terraform",
+                "Lead, designed, and coded a robust multi-tenant analytics solution (QuickSight) spanning multiple AWS regions",
+                "Serving as technical lead on company wide Hub integration project",
+                "Integrating AWS services such as functions, storage, and authentication throughout CBORD",
+                "Introducing and harnessing IaC with Serverless and Terraform",
             ],
             site: "https://www.cbord.com/",
             icon: "university"
@@ -212,7 +220,38 @@ export const jobs = {
     ]
 }
 
-export const projects = [
+export const collegeProjects = [
     "Created website that displays the latest news on every NASDAQ Stock ticker using web-scraped data.",
     "Implementation of Support Vector Machine and creation of custom Kernel",
     "Constant experimentation with technologies to understand their place in the development ecosystem"]
+
+export const hobbyProjects = [
+    {
+        title: "Isometric Terrain Generator",
+        description: "Using a home brewed Perlin Noise algorithm, this project combines Isometric Tileset Art with my vision of dynamic Terrain Generation. There are preset worlds setup for exploration and play! <strong>Please maximize.  I'm working on a fixes for the UI display location and performance issues.</strong>",
+        lastPublishDate: "01/03/2021",
+        contents: <iframe src="buildWebGL/index.html" height="650" width="975" title="Unity Test"></iframe>,
+        credits: 
+            [
+                {
+                    title: "Unity Game Engine",
+                    link: "https://unity.com/"
+                },
+                {
+                    title: "Sebastian Lague's Procedural Landmass Generation series.",
+                    link: "https://www.youtube.com/watch?v=wbpMiKiSKm8&list=PLFt_AvWsXl0eBW2EiBtl_sxmDtSgZBxB3"
+                },
+                {
+                    title: "Tileset designs by Max Heyder Art",
+                    link: "https://assetstore.unity.com/publishers/10686"
+                }
+            ],
+        gitHubUrl: "https://github.com/ethanabowen/isometric-terrain-generation"
+    },
+    {
+        title: "Generate Random Object Values (GROV)",
+        description: "On-going project that will populate, recursively, any Java object.  Best used for Testing with complex schemas or for stress testing.  I've implemented this twice professionally and have decided to start rewriting it for my own work.",
+        lastPublishDate: "11/09/2020",
+        gitHubUrl: "https://github.com/ethanabowen/GROV"
+    },
+]

@@ -47,7 +47,7 @@ function Job(props) {
         }
         <div className="card-subtitle">
           <div className="row">
-            <span className="col">{props.title}</span>
+            <span className="col"><strong>{props.title}</strong></span>
             <span className="col text-right">{props.startDate} - {props.endDate}</span>
           </div>
         </div>
