@@ -23,12 +23,6 @@ a {
   text-align: center;
 }
 
-/* This bottom margins ensures the resume will
- print with a solid colors background for 2 pages*/
-.very-bottom-margin {
-  margin-bottom: 0px;
-}
-
 /* For Certification text center, probably a better way to do this */
 .place-content-center {
   place-content: center;

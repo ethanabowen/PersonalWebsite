@@ -8,8 +8,8 @@ Built using AWS Amplify and React.
 
 ## Steps for setup:
 
-**Clone:** <code>amplify init --app https://github.com/ethanabowen/PersonalWebsite.git</code>
+**Clone:** cli: amplify init --app https://github.com/ethanabowen/PersonalWebsite.git</code>
 
-**NPM:** <code>npm i</code>
+**Dependencies:** cli: yarn
 
-**Run:** <code>yarn start</code>
+**Run:** cli: yarn start<
