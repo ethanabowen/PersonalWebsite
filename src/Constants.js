@@ -168,7 +168,7 @@ export const jobs = {
             "Adopted the open-source mindset by actively seeking and applying new opportunities to enhance the customer experience",
             "Created 'Generic Class Generator' in Java that populated any Java object with random values (recursively if needed)"
         ],
-        site: "https://www.cbord.com/",
+        site: "https://www.pier1.com/",
         icon: "store"
     }],
     bnsf: [{
