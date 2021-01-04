@@ -231,7 +231,7 @@ export const hobbyProjects = [
         title: "Isometric Terrain Generator",
         description: "Using a home brewed Perlin Noise algorithm, this project combines Isometric Tileset Art with my vision of dynamic Terrain Generation. There are preset worlds setup for exploration and play! <strong>Maximize for best experience.</strong> Try out the Zoom (Right Click) and Drag features while exploring the different terrains!",
         lastPublishDate: "01/03/2021",
-        contents: <iframe src="buildWebGL/index.html" height="650" width="975" title="Unity Test"></iframe>,
+        contents: <iframe src="buildWebGL/index.html" height="650" width="975" frameBorder="0" title="Isometric Terrain Generator"></iframe>,
         credits: 
             [
                 {
