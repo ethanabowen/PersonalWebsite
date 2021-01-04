@@ -48,7 +48,7 @@ function Resume() {
               <img width="155" height="155" alt="" src="https://d1.awsstatic.com/training-and-certification/Certification%20Badges/data-analytics-specialty-badge_512x512.f81954f771d19aebbeb21c337adadc9a79983c6e.png" />
           </div>
           <div className="row place-content-center">
-            <span>Will get after SAA</span>
+            <span>Pursuing after SAA</span>
           </div>
         </div>
         

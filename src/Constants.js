@@ -44,11 +44,12 @@ export const skills = {
     backend: [
         { technology: "Java", proficiency: 10 },
         { technology: "Spring", proficiency: 10 },
-        { technology: "Eureka/Zuul", proficiency: 7 },
+        { technology: "Python", proficiency: 7 },
         { technology: "C#", proficiency: 8 },
         { technology: "C/C++", proficiency: 6 },
         { technology: "PHP", proficiency: 8 },
-        { technology: "Groovy", proficiency: 8 }
+        { technology: "Groovy", proficiency: 8 },
+        { technology: "Eureka/Zuul", proficiency: 7 }
     ],
     frontend: [
         { technology: "Angular", proficiency: 5 },
@@ -109,10 +110,10 @@ export const skills = {
     ]
 }
 
-export const softSkills = [
+/*export const softSkills = [
     "2+ years of technical leadership on multiple projects",
     "Initiated knowledge sharing sessions on multiple teams"
-]
+]*/
 
 export const jobs = {
     CBORD: [
@@ -122,7 +123,7 @@ export const jobs = {
             startDate: "03/2020",
             endDate: "Present",
             details: [
-                "Lead, designed, and coded a robust multi-tenant analytics solution (QuickSight) spanning multiple AWS regions",
+                "Led, designed, and coded a robust multi-tenant analytics solution (QuickSight) spanning multiple AWS regions",
                 "Serving as technical lead on company wide Hub integration project",
                 "Integrating AWS services such as functions, storage, and authentication throughout CBORD",
                 "Introducing and harnessing IaC with Serverless and Terraform",
@@ -167,7 +168,7 @@ export const jobs = {
             "Adopted the open-source mindset by actively seeking and applying new opportunities to enhance the customer experience",
             "Created 'Generic Class Generator' in Java that populated any Java object with random values (recursively if needed)"
         ],
-        site: "https://www.cbord.com/",
+        site: "https://www.pier1.com/",
         icon: "store"
     }],
     bnsf: [{
