@@ -44,11 +44,12 @@ export const skills = {
     backend: [
         { technology: "Java", proficiency: 10 },
         { technology: "Spring", proficiency: 10 },
-        { technology: "Eureka/Zuul", proficiency: 7 },
+        { technology: "Python", proficiency: 7 },
         { technology: "C#", proficiency: 8 },
         { technology: "C/C++", proficiency: 6 },
         { technology: "PHP", proficiency: 8 },
-        { technology: "Groovy", proficiency: 8 }
+        { technology: "Groovy", proficiency: 8 },
+        { technology: "Eureka/Zuul", proficiency: 7 }
     ],
     frontend: [
         { technology: "Angular", proficiency: 5 },
@@ -122,7 +123,7 @@ export const jobs = {
             startDate: "03/2020",
             endDate: "Present",
             details: [
-                "Lead, designed, and coded a robust multi-tenant analytics solution (QuickSight) spanning multiple AWS regions",
+                "Led, designed, and coded a robust multi-tenant analytics solution (QuickSight) spanning multiple AWS regions",
                 "Serving as technical lead on company wide Hub integration project",
                 "Integrating AWS services such as functions, storage, and authentication throughout CBORD",
                 "Introducing and harnessing IaC with Serverless and Terraform",
