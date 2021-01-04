@@ -65,7 +65,7 @@ function Resume() {
       </div>
 
       <div className="section-header">Projects</div>
-      <div className="row justify-content-center pb-5">
+      <div className="row col justify-content-center pb-5">
         I highly encourage visiting the Projects page on my website and my GitHub page.
       </div>
     </>
