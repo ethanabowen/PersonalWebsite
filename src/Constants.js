@@ -110,10 +110,10 @@ export const skills = {
     ]
 }
 
-export const softSkills = [
+/*export const softSkills = [
     "2+ years of technical leadership on multiple projects",
     "Initiated knowledge sharing sessions on multiple teams"
-]
+]*/
 
 export const jobs = {
     CBORD: [
