@@ -30,11 +30,11 @@ function HobbyProject(props) {
     <>
       <div className="row-12 pt-5"><h1 className="text-center">{props.title}</h1></div>
       <div className="row justify-content-center pt-2 pb-2">
-        <div className="col-3 col-sm-4">
+        <div className="col-lg-3 col-sm-4">
           <span className="row">Last Publish Date: {props.lastPublishDate}</span>
           {props.gitHubUrl && <span className="row"><a className="social-icon" href={props.gitHubUrl} ><FontAwesomeIcon icon={faGithub} /> GitHub Repository</a></span>}
         </div>
-        <div className="col-6 col-sm-10 justify-content-left">
+        <div className="col-lg-6 col-sm-10 justify-content-left">
           <div className="row"><strong>Description:</strong> <div dangerouslySetInnerHTML={{__html: props.description}} /></div>
 
           {props.credits &&
