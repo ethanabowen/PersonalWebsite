@@ -40,7 +40,7 @@ function Resume() {
               <img width="155" height="155" alt="" src="https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified_Solutions-Architect_Associate_512x512.d82aee07920970350c427c8d0542bc239180a486.png" />
           </div>
           <div className="row place-content-center">
-            <span>Testing March 15th</span>
+            <span>Testing May 1st</span>
           </div>
         </div>
         <div className="col-auto">
