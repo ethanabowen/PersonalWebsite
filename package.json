@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@aws-amplify/cli": "^7.6.4",
     "@aws-amplify/ui-react": "^0.2.9",
     "@fortawesome/fontawesome-svg-core": "^1.2.29",
     "@fortawesome/free-brands-svg-icons": "^5.13.1",
@@ -12,12 +13,14 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "aws-amplify": "^3.0.18",
+    "aws-sdk": "^2.1046.0",
     "bootstrap": "^4.5.0",
-    "react": "^17.0.1",
+    "react": "^16.8.0",
     "react-bootstrap": "^1.0.1",
-    "react-dom": "^17.0.1",
+    "react-dom": "^16.8.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "video.js": "^7.17.0",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

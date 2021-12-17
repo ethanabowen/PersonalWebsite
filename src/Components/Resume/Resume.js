@@ -24,34 +24,37 @@ function Resume() {
 
       <div className="section-header">Certificates</div>
       <div className="row justify-content-center">
-      
+
         <div className="col-auto">
           <div className="row">
-            <a href="https://www.youracclaim.com/badges/48949001-5ccb-4f7c-97bc-dab466b027c3/embedded">
-              <img width="155" height="155" alt="" src="https://images.youracclaim.com/images/68468004-5a85-4f3b-bc58-590773979486/AWS-CloudPractitioner-2020.png" />
+            <a href="https://www.credly.com/badges/f866b75d-7266-4b06-83bf-a8d1c535e95c">
+              <img width="155" height="155" alt="" src="https://images.credly.com/size/340x340/images/68468004-5a85-4f3b-bc58-590773979486/AWS-CloudPractitioner-2020.png" />
             </a>
           </div>
           <div className="row place-content-center">
-            <span>09/20 - 09/23</span>
+            <span>12/21 - 12/24</span>
           </div>
         </div>
         <div className="col-auto">
           <div className="row">
-              <img width="155" height="155" alt="" src="https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified_Solutions-Architect_Associate_512x512.d82aee07920970350c427c8d0542bc239180a486.png" />
+            <a href="https://www.credly.com/badges/3a7b71a8-fd59-41a4-be34-359e292487b5">
+              <img width="155" height="155" alt="" src="https://images.credly.com/size/340x340/images/598f6ac6-2dbd-4394-8ae4-943b2f4c43ea/AWS-Developer-Associate-2020.png" />
+            </a>
           </div>
           <div className="row place-content-center">
-            <span>Testing May 1st</span>
+            <span>12/21 - 12/24</span>
           </div>
         </div>
         <div className="col-auto">
           <div className="row">
-              <img width="155" height="155" alt="" src="https://d1.awsstatic.com/training-and-certification/Certification%20Badges/data-analytics-specialty-badge_512x512.f81954f771d19aebbeb21c337adadc9a79983c6e.png" />
+            <a href="https://www.credly.com/badges/1e44a067-d3ba-47cc-8a80-3e4c9e9fc670">
+              <img width="155" height="155" alt="" src="https://images.credly.com/size/340x340/images/4bc21d8b-4afe-4fbd-9a90-a9de8bf7b240/AWS-SolArchitect-Associate-2020.png" />
+            </a>
           </div>
           <div className="row place-content-center">
-            <span>Pursuing after SAA</span>
+            <span>08/21 - 08/24</span>
           </div>
         </div>
-        
       </div>
 
       <div className="section-header">Tech Skills</div>

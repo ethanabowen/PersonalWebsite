@@ -6,6 +6,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 
 import Resume from '../Resume/Resume';
 import Projects from '../Projects/Projects';
+import SecurityAuth from '../Security/SecurityAuth';
 import { welcome } from '../../Constants.js';
 
 function App() {
@@ -32,6 +33,9 @@ function App() {
         </Route>
         <Route path="/projects">
           <Projects />
+        </Route>
+        <Route path="/security">
+          <SecurityAuth />
         </Route>
         <Route path="/">
           <Resume />
