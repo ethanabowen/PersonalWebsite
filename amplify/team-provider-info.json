@@ -10,6 +10,17 @@
       "StackName": "amplify-amplify23b8505493804-staging-212910",
       "StackId": "arn:aws:cloudformation:us-east-1:859700905691:stack/amplify-amplify23b8505493804-staging-212910/df353120-61db-11ec-a481-12a7667d8e5b",
       "AmplifyAppId": "d2pxwt5ibf5gab"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2pxwt5ibf5gab",
+          "type": "cicd"
+        }
+      },
+      "auth": {
+        "PersonalWebsite": {}
+      }
     }
   }
 }
