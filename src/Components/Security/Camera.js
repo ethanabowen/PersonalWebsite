@@ -4,7 +4,7 @@ import { Auth } from 'aws-amplify';
 import VideoPlayer from './VideoPlayer.js';
 
 // Initialize the Amazon Cognito credentials provider
-//AWS.config.region = 'us-east-1'; // Region
+AWS.config.region = 'us-east-1'; // Region
 /*AWS.config.credentials = new AWS.CognitoIdentityCredentials({
   IdentityPoolId: 'us-east-1:72e8db17-2a15-433d-a9d8-0d2691a08d9b',
 });
