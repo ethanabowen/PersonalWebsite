@@ -1,40 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import Amplify, { Auth } from 'aws-amplify';
 import { configureAmplify } from '../../Utilities/auth';
+import { withAuthenticator } from '@aws-amplify/ui-react';
 import Security from './Security.js';
+import awsconfig from '../../aws-exports';
 
 
 // one time configuration for authentication
 if (!Amplify.Auth.userPool) {
-    configureAmplify();
+    Amplify.configure(awsconfig);
+    //configureAmplify();
 }
 
 const SecurityAuth = () => {
-    const [cognitoUser, setCognitoUser] = useState();
+    const { user, setUser } = useState()
 
-    // Only using this approach to trigger a re-render
-    // for when Amplify initializes 
-    useEffect(() => {
-        Auth.currentAuthenticatedUser().then(
-            cognitoUser => {
-                if (!cognitoUser) {
-                    Auth.federatedSignIn({ provider: 'Google' }); //redirects to Google sign in
-                } else {
-                    setCognitoUser(cognitoUser)
-                }
-            }, error => {
-                console.log(error);
-            })
-    }, [])
+    return (
+        <>
+            !user ?
+            <div className="App">
+                <>{Auth.federatedSignIn({ provider: 'Google' })}</>
 
-    return <>
-        {!cognitoUser
-            ? <div>Redirecting...</div>
-            : Auth.user ?
-                <Security />
-                : <div>hello!</div>
-        }
-    </>
+                { }
+            </div> :
+            <Security />
+        </>
+
+    )
 }
 
 export default SecurityAuth;

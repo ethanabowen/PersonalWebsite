@@ -4,8 +4,8 @@ import VideoPlayer from './VideoPlayer.js';
 
 // Step 1: Configure SDK Clients
 const awsOptions = {
-  accessKeyId: "AKIA4QKRKY3NTGEQVRWZ",
-  secretAccessKey: "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",
+  accessKeyId: "AKIA4QKRKY3N2HEPJ4HQ",
+  secretAccessKey: "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",
   region: "us-east-1"
 }
 
