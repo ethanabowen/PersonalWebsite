@@ -56,46 +56,48 @@ const getKinesisStreamUrl = async (streamName, setKinesisStreamUrl) => {
       console.log('session data:', data)
     })
     console.log("Session", session)
-    var kinesisVideo = new AWS.KinesisVideo();
-    var kinesisVideoArchivedContent = new AWS.KinesisVideoArchivedMedia();
+  });
 
-    console.log('Fetching data endpoint');
+  var kinesisVideo = new AWS.KinesisVideo();
+  var kinesisVideoArchivedContent = new AWS.KinesisVideoArchivedMedia();
 
-    await kinesisVideo.getDataEndpoint({
+  console.log('Fetching data endpoint');
+
+  await kinesisVideo.getDataEndpoint({
+    StreamName: streamName,
+    APIName: "GET_HLS_STREAMING_SESSION_URL"
+  }, function (err, response) {
+    if (err) { return console.error(err); }
+
+    console.log('Data endpoint: ' + response.DataEndpoint);
+    kinesisVideoArchivedContent.endpoint = new AWS.Endpoint(response.DataEndpoint);
+
+    // Get a Streaming Session URL
+    console.log('Fetching Streaming Session URL');
+
+    kinesisVideoArchivedContent.getHLSStreamingSessionURL({
       StreamName: streamName,
-      APIName: "GET_HLS_STREAMING_SESSION_URL"
+      PlaybackMode: 'LIVE',
+      /*HLSFragmentSelector: {
+        FragmentSelectorType: $('#fragmentSelectorType').val(),
+        TimestampRange: $('#playbackMode').val() === "LIVE" ? undefined : {
+          StartTimestamp: new Date($('#startTimestamp').val()),
+          EndTimestamp: new Date($('#endTimestamp').val())
+        }
+      },*/
+      //ContainerFormat: 'FRAGMENTED_MP4',
+      //DiscontinuityMode: 'ALWAYS'
+      DisplayFragmentTimestamp: 'ALWAYS',
+      //MaxMediaPlaylistFragmentResults: 5 for LIVE, 1000 for ON_DEMAND,
+      //Expires: 300 //seconds
     }, function (err, response) {
       if (err) { return console.error(err); }
 
-      console.log('Data endpoint: ' + response.DataEndpoint);
-      kinesisVideoArchivedContent.endpoint = new AWS.Endpoint(response.DataEndpoint);
+      console.log('HLS Streaming Session URL: ' + response.HLSStreamingSessionURL);
 
-      // Get a Streaming Session URL
-      console.log('Fetching Streaming Session URL');
-
-      kinesisVideoArchivedContent.getHLSStreamingSessionURL({
-        StreamName: streamName,
-        PlaybackMode: 'LIVE',
-        /*HLSFragmentSelector: {
-          FragmentSelectorType: $('#fragmentSelectorType').val(),
-          TimestampRange: $('#playbackMode').val() === "LIVE" ? undefined : {
-            StartTimestamp: new Date($('#startTimestamp').val()),
-            EndTimestamp: new Date($('#endTimestamp').val())
-          }
-        },*/
-        //ContainerFormat: 'FRAGMENTED_MP4',
-        //DiscontinuityMode: 'ALWAYS'
-        DisplayFragmentTimestamp: 'ALWAYS',
-        //MaxMediaPlaylistFragmentResults: 5 for LIVE, 1000 for ON_DEMAND,
-        //Expires: 300 //seconds
-      }, function (err, response) {
-        if (err) { return console.error(err); }
-
-        console.log('HLS Streaming Session URL: ' + response.HLSStreamingSessionURL);
-
-        setKinesisStreamUrl(response.HLSStreamingSessionURL);
-      });
+      setKinesisStreamUrl(response.HLSStreamingSessionURL);
     });
-  }
+  });
+}
 
 export default Camera;
