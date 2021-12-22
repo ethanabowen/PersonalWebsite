@@ -53,7 +53,7 @@ const getKinesisStreamUrl = async (streamName, setKinesisStreamUrl) => {
         credentials: Auth.essentialCredentials(credentials)
       });
 
-      sts.assumeRoleWithWebIdentity(assumeRoleParams, function (err, data) {
+      await sts.assumeRoleWithWebIdentity(assumeRoleParams, function (err, data) {
         if (err) console.log(err, err.stack); // an error occurred
         else console.log(data);
 
