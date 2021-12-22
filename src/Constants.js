@@ -228,10 +228,9 @@ export const collegeProjects = [
 
 export const hobbyProjects = [
     {
-        title: "Isometric Terrain Generator",
-        description: "Using a home brewed Perlin Noise algorithm, this project combines Isometric Tileset Art with my vision of dynamic Terrain Generation. There are preset worlds setup for exploration and play! <strong>Maximize for best experience.</strong> Try out the Zoom (Right Click) and Drag features while exploring the different terrains!",
+        title: <a href="https://ethanabowen.github.io/isometric-terrain-generation-hosting/">Isometric Terrain Generator</a>,
+        description: "Using a home brewed Perlin Noise algorithm, this project combines Isometric Tileset Art with my vision of dynamic Terrain Generation. There are preset worlds setup for exploration and play! <strong>Maximize for best experience.</strong> Try out the Zoom (Right Click) and Drag features while exploring the different terrains!  <a href=\"https://ethanabowen.github.io/isometric-terrain-generation-hosting/\">Try it out!</a>",
         lastPublishDate: "01/03/2021",
-        contents: <iframe src="https://ethanabowen.github.io/isometric-terrain-generation-hosting/" height="650" width="975" frameBorder="0" title="Isometric Terrain Generator"></iframe>,
         credits:
             [
                 {
