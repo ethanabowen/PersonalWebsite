@@ -46,26 +46,30 @@ const getKinesisStreamUrl = async (streamName, setKinesisStreamUrl) => {
   }
 
   var session = null;
+  var sts = null
   await Auth.currentCredentials()
     .then(credentials => {
       console.log("STS")
-      const sts = new AWS.STS({
+      sts = new AWS.STS({
         credentials: Auth.essentialCredentials(credentials)
-      });
-
-      await sts.assumeRoleWithWebIdentity(assumeRoleParams, function (err, data) {
-        if (err) console.log(err, err.stack); // an error occurred
-        else console.log(data);
-
-        session = data
-        console.log("Session", session)
       });
     })
 
+  await sts.assumeRoleWithWebIdentity(assumeRoleParams, function (err, data) {
+    if (err) console.log(err, err.stack); // an error occurred
+    else console.log(data);
+
+    session = data;
+    console.log("Session", session)
+  });
 
   console.log("Session outside of loop", session)
-  var kinesisVideo = new AWS.KinesisVideo();
-  var kinesisVideoArchivedContent = new AWS.KinesisVideoArchivedMedia();
+  var options = {
+    AccessKeyId: session.AccessKeyId,
+    SecretAccessKeyId: session.SecretAccessKeyId
+  }
+  var kinesisVideo = new AWS.KinesisVideo(options);
+  var kinesisVideoArchivedContent = new AWS.KinesisVideoArchivedMedia(options);
 
   console.log('Fetching data endpoint');
 
