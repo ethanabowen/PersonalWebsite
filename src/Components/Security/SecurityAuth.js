@@ -8,6 +8,7 @@ if (!Amplify.Auth.userPool) {
     Amplify.configure(awsconfig);
 }
 
+/* Security page is locked down to a very specific set of allowed users with backend logic */
 const SecurityAuth = () => {
     const [cognitoUser, setCognitoUser] = useState();
 
