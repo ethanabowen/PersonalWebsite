@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import KinesisVideo from 'aws-sdk/clients/kinesisvideo';
+import KinesisVideoArchivedMedia from 'aws-sdk/clients/kinesisvideoarchivedmedia';
 import AWS from 'aws-sdk';
 import { Auth } from 'aws-amplify';
 import VideoPlayer from './VideoPlayer.js';
 
-AWS.config.region = 'us-east-1'; // Region
+AWS.config.region = 'us-east-1'
 
 function Camera(props) {
   const [kinesisStreamUrl, setKinesisStreamUrl] = useState(null);
@@ -51,17 +53,22 @@ const getKinesisStreamUrl = async (streamName, setKinesisStreamUrl) => {
     AccessKeyId: null,
     SecretAccessKeyId: null
   }
+
+  var kinesisVideo = null
+  var kinesisVideoArchivedContent = null
   await Auth.currentCredentials()
     .then(credentials => {
       console.log("STS")
-      sts = new AWS.STS({
+      /*sts = new AWS.STS({
         credentials: Auth.essentialCredentials(credentials)
-      });
+      });*/
+      kinesisVideo = new KinesisVideo(credentials);
+      kinesisVideoArchivedContent = new KinesisVideoArchivedMedia(credentials);
 
-      options = {
+      /*options = {
         AccessKeyId: credentials.accessKeyId,
         SecretAccessKeyId: credentials.secretAccessKey
-      }
+      }*/
     })
 
   /* var session = null;
@@ -75,8 +82,8 @@ const getKinesisStreamUrl = async (streamName, setKinesisStreamUrl) => {
 
   console.log("Session outside of loop", session)*/
 
-  var kinesisVideo = new AWS.KinesisVideo(options);
-  var kinesisVideoArchivedContent = new AWS.KinesisVideoArchivedMedia(options);
+  //var kinesisVideo = new AWS.KinesisVideo(options);
+  //var kinesisVideoArchivedContent = new AWS.KinesisVideoArchivedMedia(options);
 
   console.log('Fetching data endpoint');
 
@@ -87,7 +94,7 @@ const getKinesisStreamUrl = async (streamName, setKinesisStreamUrl) => {
     if (err) { return console.error(err); }
 
     console.log('Data endpoint: ' + response.DataEndpoint);
-    kinesisVideoArchivedContent.endpoint = new AWS.Endpoint(response.DataEndpoint);
+    kinesisVideoArchivedContent.endpoint = response.DataEndpoint;//new AWS.Endpoint(response.DataEndpoint);
 
     // Get a Streaming Session URL
     console.log('Fetching Streaming Session URL');
