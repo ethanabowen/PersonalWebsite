@@ -1,4 +1,3 @@
-import './Security.css';
 import Camera from './Camera.js';
 import { Auth } from 'aws-amplify';
 
