@@ -38,55 +38,18 @@ function Camera(props) {
 }
 
 const getKinesisStreamUrl = async (streamName, setKinesisStreamUrl) => {
-
-  /*NEVER WORKED WITH ASSUME ROLE, ALWAYS NEEDED HARD CODED KEYS*/
-  var assumeRoleParams = {
-    RoleArn: "arn:aws:iam::859700905691:role/us-east-1_hmGlCiqRE-authRole",
-    RoleSessionName: "KVS_READ_SESSION",
-    DurationSeconds: 3600,
-    WebIdentityToken: ""
-  }
-
-
-  var sts = null;
-  var options = {
-    AccessKeyId: null,
-    SecretAccessKeyId: null
-  }
-
   var kinesisVideo = null
   var kinesisVideoArchivedContent = null
   await Auth.currentCredentials()
     .then(credentials => {
       console.log("STS")
-      /*sts = new AWS.STS({
-        credentials: Auth.essentialCredentials(credentials)
-      });*/
+
       AWS.config.AccessKeyId = credentials.accessKeyId;
       AWS.config.SecretAccessKeyId = credentials.SecretAccessKeyId;
 
       kinesisVideo = new KinesisVideo(credentials);
       kinesisVideoArchivedContent = new KinesisVideoArchivedMedia(credentials);
-
-      /*options = {
-        AccessKeyId: credentials.accessKeyId,
-        SecretAccessKeyId: credentials.secretAccessKey
-      }*/
     })
-
-  /* var session = null;
-    await sts.assumeRoleWithWebIdentity(assumeRoleParams, function (err, data) {
-    if (err) console.log(err, err.stack); // an error occurred
-    else console.log(data);
-
-    session = data;
-    console.log("Session", session)
-  });
-
-  console.log("Session outside of loop", session)*/
-
-  //var kinesisVideo = new AWS.KinesisVideo(options);
-  //var kinesisVideoArchivedContent = new AWS.KinesisVideoArchivedMedia(options);
 
   console.log('Fetching data endpoint');
 
