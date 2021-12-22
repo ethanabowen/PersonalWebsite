@@ -62,6 +62,9 @@ const getKinesisStreamUrl = async (streamName, setKinesisStreamUrl) => {
       /*sts = new AWS.STS({
         credentials: Auth.essentialCredentials(credentials)
       });*/
+      AWS.config.AccessKeyId = credentials.accessKeyId;
+      AWS.config.SecretAccessKeyId = credentials.SecretAccessKeyId;
+
       kinesisVideo = new KinesisVideo(credentials);
       kinesisVideoArchivedContent = new KinesisVideoArchivedMedia(credentials);
 
