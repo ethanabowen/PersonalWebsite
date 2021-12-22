@@ -44,9 +44,6 @@ const getKinesisStreamUrl = async (streamName, setKinesisStreamUrl) => {
     DurationSeconds: 3600,
     WebIdentityToken: ""
   }
-  console.log("AUTH", Auth)
-  await Auth.signIn();
-  console.log("AUTH SIGNED IN", Auth)
 
   var session = null;
   await Auth.currentCredentials()
