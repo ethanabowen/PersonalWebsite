@@ -38,59 +38,64 @@ function Camera(props) {
 const getKinesisStreamUrl = async (streamName, setKinesisStreamUrl) => {
 
   /*NEVER WORKED WITH ASSUME ROLE, ALWAYS NEEDED HARD CODED KEYS*/
-  var sts = new AWS.STS()
-
   var assumeRoleParams = {
-    RoleArn: "AUTH_ROLE_ARN",
+    RoleArn: "arn:aws:iam::859700905691:role/us-east-1_hmGlCiqRE-authRole",
     RoleSessionName: "KVS_READ_SESSION",
-    DurationSeconds: 900
+    DurationSeconds: 3600,
+    WebIdentityToken: ""
   }
-  var session = sts.assumeRole(assumeRoleParams, function (err, data) {
-    if (err) {
-      console.log('session err:', err)
-    }
-    console.log('session data:', data)
-  })
-  var kinesisVideo = new AWS.KinesisVideo();
-  var kinesisVideoArchivedContent = new AWS.KinesisVideoArchivedMedia();
+  console.log("AUTH", Auth)
+  console.log("STS")
+  AWS.STS.assumeRoleWithWebIdentity.assumeRoleWithWebIdentity(params, function (err, data) {
+    if (err) console.log(err, err.stack); // an error occurred
+    else console.log(data);
+    var session = sts.assumeRole(assumeRoleParams, function (err, data) {
+      if (err) {
+        console.log('session err:', err)
+      }
+      console.log('session data:', data)
+    })
+    console.log("Session", session)
+    var kinesisVideo = new AWS.KinesisVideo();
+    var kinesisVideoArchivedContent = new AWS.KinesisVideoArchivedMedia();
 
-  console.log('Fetching data endpoint');
+    console.log('Fetching data endpoint');
 
-  await kinesisVideo.getDataEndpoint({
-    StreamName: streamName,
-    APIName: "GET_HLS_STREAMING_SESSION_URL"
-  }, function (err, response) {
-    if (err) { return console.error(err); }
-
-    console.log('Data endpoint: ' + response.DataEndpoint);
-    kinesisVideoArchivedContent.endpoint = new AWS.Endpoint(response.DataEndpoint);
-
-    // Get a Streaming Session URL
-    console.log('Fetching Streaming Session URL');
-
-    kinesisVideoArchivedContent.getHLSStreamingSessionURL({
+    await kinesisVideo.getDataEndpoint({
       StreamName: streamName,
-      PlaybackMode: 'LIVE',
-      /*HLSFragmentSelector: {
-        FragmentSelectorType: $('#fragmentSelectorType').val(),
-        TimestampRange: $('#playbackMode').val() === "LIVE" ? undefined : {
-          StartTimestamp: new Date($('#startTimestamp').val()),
-          EndTimestamp: new Date($('#endTimestamp').val())
-        }
-      },*/
-      //ContainerFormat: 'FRAGMENTED_MP4',
-      //DiscontinuityMode: 'ALWAYS'
-      DisplayFragmentTimestamp: 'ALWAYS',
-      //MaxMediaPlaylistFragmentResults: 5 for LIVE, 1000 for ON_DEMAND,
-      //Expires: 300 //seconds
+      APIName: "GET_HLS_STREAMING_SESSION_URL"
     }, function (err, response) {
       if (err) { return console.error(err); }
 
-      console.log('HLS Streaming Session URL: ' + response.HLSStreamingSessionURL);
+      console.log('Data endpoint: ' + response.DataEndpoint);
+      kinesisVideoArchivedContent.endpoint = new AWS.Endpoint(response.DataEndpoint);
 
-      setKinesisStreamUrl(response.HLSStreamingSessionURL);
+      // Get a Streaming Session URL
+      console.log('Fetching Streaming Session URL');
+
+      kinesisVideoArchivedContent.getHLSStreamingSessionURL({
+        StreamName: streamName,
+        PlaybackMode: 'LIVE',
+        /*HLSFragmentSelector: {
+          FragmentSelectorType: $('#fragmentSelectorType').val(),
+          TimestampRange: $('#playbackMode').val() === "LIVE" ? undefined : {
+            StartTimestamp: new Date($('#startTimestamp').val()),
+            EndTimestamp: new Date($('#endTimestamp').val())
+          }
+        },*/
+        //ContainerFormat: 'FRAGMENTED_MP4',
+        //DiscontinuityMode: 'ALWAYS'
+        DisplayFragmentTimestamp: 'ALWAYS',
+        //MaxMediaPlaylistFragmentResults: 5 for LIVE, 1000 for ON_DEMAND,
+        //Expires: 300 //seconds
+      }, function (err, response) {
+        if (err) { return console.error(err); }
+
+        console.log('HLS Streaming Session URL: ' + response.HLSStreamingSessionURL);
+
+        setKinesisStreamUrl(response.HLSStreamingSessionURL);
+      });
     });
-  });
-}
+  }
 
 export default Camera;

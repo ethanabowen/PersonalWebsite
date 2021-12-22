@@ -34,6 +34,9 @@ function App() {
         <Route path="/projects">
           <Projects />
         </Route>
+        <Route path="/security">
+          <SecurityAuth />
+        </Route>
         <Route path="/">
           <Resume />
         </Route>
