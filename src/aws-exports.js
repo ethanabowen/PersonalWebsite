@@ -3,12 +3,12 @@
 
 const awsmobile = {
     "aws_project_region": "us-east-1",
-    "aws_cognito_identity_pool_id": "us-east-1:80051a20-1aca-4faa-a9d1-7059e6e86540",
+    "aws_cognito_identity_pool_id": "us-east-1:7eecdc92-a7ab-4bcd-ada0-865c949ad896",
     "aws_cognito_region": "us-east-1",
-    "aws_user_pools_id": "us-east-1_O9BWMevZ8",
-    "aws_user_pools_web_client_id": "2sp8s67enoh5lpiv6gpg3v7dvi",
+    "aws_user_pools_id": "us-east-1_Of87kVDzl",
+    "aws_user_pools_web_client_id": "2thv3392cvgus7b4kivsv467lm",
     "oauth": {
-        "domain": "2ywep5mwcopn-staging.auth.us-east-1.amazoncognito.com",
+        "domain": "yamg3klf5ttv-staging.auth.us-east-1.amazoncognito.com",
         "scope": [
             "phone",
             "email",
@@ -16,8 +16,8 @@ const awsmobile = {
             "profile",
             "aws.cognito.signin.user.admin"
         ],
-        "redirectSignIn": "https://www.ethanabowen.com/Security",
-        "redirectSignOut": "https://www.ethanabowen.com/Security",
+        "redirectSignIn": "https://www.ethanabowen.com/hub,http://localhost:3000/hub",
+        "redirectSignOut": "https://www.ethanabowen.com/hub,http://localhost:3000/hub",
         "responseType": "code"
     },
     "federationTarget": "COGNITO_USER_POOLS",
@@ -30,7 +30,7 @@ const awsmobile = {
     "aws_cognito_signup_attributes": [
         "EMAIL"
     ],
-    "aws_cognito_mfa_configuration": "OFF",
+    "aws_cognito_mfa_configuration": "ON",
     "aws_cognito_mfa_types": [
         "SMS"
     ],

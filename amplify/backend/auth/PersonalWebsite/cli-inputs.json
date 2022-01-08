@@ -3,16 +3,16 @@
   "cognitoConfig": {
     "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "person8c716853",
+    "resourceNameTruncated": "person182e16c8",
     "userPoolName": "PersonalWebsite",
     "autoVerifiedAttributes": [
       "email"
     ],
-    "mfaConfiguration": "OFF",
+    "mfaConfiguration": "ON",
     "mfaTypes": [
       "SMS Text Message"
     ],
-    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsAuthenticationMessage": "Your login code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
     "emailVerificationSubject": "Forgot password code: {####}",
     "emailVerificationMessage": "Forgot password code: {####}",
@@ -32,9 +32,9 @@
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "Person8c716853_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "Person182e16c8_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "8c716853",
+    "sharedId": "182e16c8",
     "resourceName": "PersonalWebsite",
     "authSelections": "identityPoolAndUserPool",
     "serviceName": "Cognito",
@@ -48,27 +48,13 @@
     "thirdPartyAuth": false,
     "authProviders": [],
     "hostedUI": true,
-    "hostedUIDomainName": "2ywep5mwcopn",
+    "hostedUIDomainName": "yamg3klf5ttv",
     "authProvidersUserPool": [
       "Google"
     ],
     "hostedUIProviderMeta": "[{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}}]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://www.ethanabowen.com/hub\"],\"LogoutURLs\":[\"https://www.ethanabowen.com/hub\"]}",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://www.ethanabowen.com/hub\",\"http://localhost:3000/hub\"],\"LogoutURLs\":[\"https://www.ethanabowen.com/hub\",\"http://localhost:3000/hub\"]}",
     "usernameCaseSensitive": false,
-    "useEnabledMfas": true,
-    "authRoleArn": {
-      "Fn::GetAtt": [
-        "AuthRole",
-        "Arn"
-      ]
-    },
-    "unauthRoleArn": {
-      "Fn::GetAtt": [
-        "UnauthRole",
-        "Arn"
-      ]
-    },
-    "breakCircularDependency": true,
-    "dependsOn": []
+    "useEnabledMfas": true
   }
 }

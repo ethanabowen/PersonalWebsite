@@ -30,7 +30,7 @@
             "REQUIRES_UPPERCASE"
           ]
         },
-        "mfaConfiguration": "OFF",
+        "mfaConfiguration": "ON",
         "mfaTypes": [
           "SMS"
         ],
