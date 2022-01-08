@@ -28,18 +28,11 @@ export const schools = [
 
 export const skills = {
     AWS: [
-        { technology: "IAM", proficiency: 8 },
-        { technology: "S3", proficiency: 10 },
-        { technology: "Cognito", proficiency: 8 },
-        { technology: "EC2", proficiency: 5 },
-        { technology: "CodeBuild", proficiency: 6 },
-        { technology: "CodePipeline", proficiency: 6 },
-        { technology: "Amplify", proficiency: 5 },
-        { technology: "CF/CDK", proficiency: 6 },
-        { technology: "API Gateway", proficiency: 5 },
-        { technology: "Lambda", proficiency: 6 },
-        { technology: "Athena", proficiency: 7 },
-        { technology: "Glue", proficiency: 7 }
+        { technology: "Operational Excellence", proficiency: 8 },
+        { technology: "Security", proficiency: 7 },
+        { technology: "Reliability", proficiency: 8 },
+        { technology: "Performance Efficiency", proficiency: 9 },
+        { technology: "Cost Optimization", proficiency: 7 }
     ],
     backend: [
         { technology: "Java", proficiency: 10 },
