@@ -32,7 +32,7 @@ function Resume() {
             </a>
           </div>
           <div className="row place-content-center">
-            <span>12/21 - 12/24</span>
+            <span>12/21 - 01/25</span>
           </div>
         </div>
         <div className="col-auto">
@@ -53,6 +53,16 @@ function Resume() {
           </div>
           <div className="row place-content-center">
             <span>08/21 - 08/24</span>
+          </div>
+        </div>
+        <div className="col-auto">
+          <div className="row">
+            <a href="https://www.credly.com/badges/c7436a9b-8c42-4a2c-a9d5-5ae831f1a445/">
+              <img width="155" height="155" alt="" src="https://images.credly.com/size/340x340/images/bf588058-87cc-4cbd-94b0-ef0385fb4371/AWS-SysOpAdmin-Associate-2020.png" />
+            </a>
+          </div>
+          <div className="row place-content-center">
+            <span>01/22 - 01/25</span>
           </div>
         </div>
       </div>

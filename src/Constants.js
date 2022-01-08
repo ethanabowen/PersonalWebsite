@@ -116,6 +116,19 @@ export const skills = {
 ]*/
 
 export const jobs = {
+    slalomBuild: [
+        {
+            company: "Slalom Build",
+            title: "Software Architect",
+            startDate: "04/2021",
+            endDate: "Present",
+            details: [
+                "Consultant to multiple clients ranging in software stacks and solutions.",
+            ],
+            site: "https://www.slalombuild.com/",
+            icon: "skiing"
+        }
+    ],
     CBORD: [
         {
             company: "CBORD",
