@@ -16,8 +16,8 @@ const awsmobile = {
             "profile",
             "aws.cognito.signin.user.admin"
         ],
-        "redirectSignIn": "https://www.ethanabowen.com/hub,http://localhost:3000/hub",
-        "redirectSignOut": "https://www.ethanabowen.com/hub,http://localhost:3000/hub",
+        "redirectSignIn": "https://www.ethanabowen.com/hub",
+        "redirectSignOut": "https://www.ethanabowen.com/hub",
         "responseType": "code"
     },
     "federationTarget": "COGNITO_USER_POOLS",
@@ -45,7 +45,9 @@ const awsmobile = {
     },
     "aws_cognito_verification_mechanisms": [
         "EMAIL"
-    ]
+    ],
+    "aws_user_files_s3_bucket": "bowen-storage",
+    "aws_user_files_s3_bucket_region": "us-east-1"
 };
 
 

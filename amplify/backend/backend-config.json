@@ -39,5 +39,13 @@
         ]
       }
     }
+  },
+  "storage": {
+    "personalwebsite2c6489c7": {
+      "service": "S3",
+      "serviceType": "imported",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": []
+    }
   }
 }

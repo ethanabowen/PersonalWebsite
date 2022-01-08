@@ -41,10 +41,10 @@ function App() {
         <Route path="/hub">
           <WebsiteAuth><Hub /></WebsiteAuth>
         </Route>
-        <Route path="hub/security">
+        <Route path="/hub/security">
           <WebsiteAuth><Security /></WebsiteAuth>
         </Route>
-        <Route path="hub/storage">
+        <Route path="/hub/storage">
           <WebsiteAuth><Storage /></WebsiteAuth>
         </Route>
 
