@@ -5,8 +5,9 @@ import Personal from '../Personal/Personal';
 import School from '../School/School';
 import Jobs from '../Jobs/Jobs';
 import Skills from '../Skills/Skills';
+import Certification from '../Certification/Certification';
 
-import { personal, schools, jobs, skills } from '../../Constants.js';
+import { personal, certifications, schools, jobs, skills } from '../../Constants.js';
 
 function Resume() {
   return (
@@ -24,47 +25,11 @@ function Resume() {
 
       <div className="section-header">Certificates</div>
       <div className="row justify-content-center">
-
-        <div className="col-auto">
-          <div className="row">
-            <a href="https://www.credly.com/badges/f866b75d-7266-4b06-83bf-a8d1c535e95c">
-              <img width="155" height="155" alt="" src="https://images.credly.com/size/340x340/images/68468004-5a85-4f3b-bc58-590773979486/AWS-CloudPractitioner-2020.png" />
-            </a>
-          </div>
-          <div className="row place-content-center">
-            <span>12/21 - 01/25</span>
-          </div>
-        </div>
-        <div className="col-auto">
-          <div className="row">
-            <a href="https://www.credly.com/badges/3a7b71a8-fd59-41a4-be34-359e292487b5">
-              <img width="155" height="155" alt="" src="https://images.credly.com/size/340x340/images/598f6ac6-2dbd-4394-8ae4-943b2f4c43ea/AWS-Developer-Associate-2020.png" />
-            </a>
-          </div>
-          <div className="row place-content-center">
-            <span>12/21 - 12/24</span>
-          </div>
-        </div>
-        <div className="col-auto">
-          <div className="row">
-            <a href="https://www.credly.com/badges/1e44a067-d3ba-47cc-8a80-3e4c9e9fc670">
-              <img width="155" height="155" alt="" src="https://images.credly.com/size/340x340/images/4bc21d8b-4afe-4fbd-9a90-a9de8bf7b240/AWS-SolArchitect-Associate-2020.png" />
-            </a>
-          </div>
-          <div className="row place-content-center">
-            <span>08/21 - 08/24</span>
-          </div>
-        </div>
-        <div className="col-auto">
-          <div className="row">
-            <a href="https://www.credly.com/badges/c7436a9b-8c42-4a2c-a9d5-5ae831f1a445/">
-              <img width="155" height="155" alt="" src="https://images.credly.com/size/340x340/images/bf588058-87cc-4cbd-94b0-ef0385fb4371/AWS-SysOpAdmin-Associate-2020.png" />
-            </a>
-          </div>
-          <div className="row place-content-center">
-            <span>01/22 - 01/25</span>
-          </div>
-        </div>
+        {certifications.map((certification, index) => {
+          return <Certification
+            key={certification.name + index}
+            {...certification} />
+        })}
       </div>
 
       <div className="section-header">Tech Skills</div>

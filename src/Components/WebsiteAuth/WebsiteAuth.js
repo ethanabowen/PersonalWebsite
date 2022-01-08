@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Amplify, { Auth } from 'aws-amplify';
-import Security from './Security.js';
 import awsconfig from '../../aws-exports';
 
 // one time configuration for authentication
@@ -9,7 +8,7 @@ if (!Amplify.Auth.userPool) {
 }
 
 /* Security page is locked down to a very specific set of allowed users with backend logic */
-const SecurityAuth = () => {
+const WebsiteAuth = (props) => {
     const [cognitoUser, setCognitoUser] = useState();
 
     // Only using this approach to trigger a re-render
@@ -30,9 +29,9 @@ const SecurityAuth = () => {
 
     return (
         <>
-            {!cognitoUser ? <div>Redirecting...</div> : <Security />}
+            {!cognitoUser ? <div>Redirecting...</div> : props.children}
         </>
     )
 }
 
-export default SecurityAuth;
+export default WebsiteAuth;

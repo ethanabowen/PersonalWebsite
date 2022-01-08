@@ -1,4 +1,4 @@
-export const welcome = "Thanks for checking out my site! I used AWS Amplify to help build it.  Right now the page is using local static data, it will soon be using AWS API Gateway/Lamda/S3!"
+export const welcome = "Thanks for checking out my site! I used AWS Amplify to help host it."
 
 export const personal = {
     name: "Ethan Bowen",
@@ -21,7 +21,7 @@ export const schools = [
     },
     {
         school: "University of Texas at Arlington",
-        degree: "Master’s of Science in Computer Science",
+        degree: "Master's of Science in Computer Science",
         year: 2016
     }
 ]
@@ -260,4 +260,36 @@ export const hobbyProjects = [
         lastPublishDate: "11/09/2020",
         gitHubUrl: "https://github.com/ethanabowen/GROV"
     },
+]
+
+
+export const certifications = [
+    {
+        name: "AWS Cloud Practitioner",
+        link: "https://www.credly.com/badges/f866b75d-7266-4b06-83bf-a8d1c535e95c",
+        image: "https://images.credly.com/size/340x340/images/68468004-5a85-4f3b-bc58-590773979486/AWS-CloudPractitioner-2020.png",
+        startDate: "09/20",
+        endDate: "01/25"
+    },
+    {
+        name: "AWS Developer Associate",
+        link: "https://www.credly.com/badges/3a7b71a8-fd59-41a4-be34-359e292487b5",
+        image: "https://images.credly.com/size/340x340/images/598f6ac6-2dbd-4394-8ae4-943b2f4c43ea/AWS-Developer-Associate-2020.png",
+        startDate: "12/21",
+        endDate: "12/24"
+    },
+    {
+        name: "AWS Solutions Architect Associate",
+        link: "https://www.credly.com/badges/1e44a067-d3ba-47cc-8a80-3e4c9e9fc670",
+        image: "https://images.credly.com/size/340x340/images/4bc21d8b-4afe-4fbd-9a90-a9de8bf7b240/AWS-SolArchitect-Associate-2020.png",
+        startDate: "08/21",
+        endDate: "08/24"
+    },
+    {
+        name: "AWS SysOps Admin Associate",
+        link: "https://www.credly.com/badges/c7436a9b-8c42-4a2c-a9d5-5ae831f1a445",
+        image: "https://images.credly.com/size/340x340/images/bf588058-87cc-4cbd-94b0-ef0385fb4371/AWS-SysOpAdmin-Associate-2020.png",
+        startDate: "01/22",
+        endDate: "01/25"
+    }
 ]

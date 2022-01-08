@@ -6,7 +6,11 @@ import { Navbar, Nav } from 'react-bootstrap';
 
 import Resume from '../Resume/Resume';
 import Projects from '../Projects/Projects';
-import SecurityAuth from '../Security/SecurityAuth';
+import Hub from '../Hub/Hub';
+import Security from '../Security/Security';
+import Storage from '../Storage/Storage';
+import WebsiteAuth from '../WebsiteAuth/WebsiteAuth';
+
 import { welcome } from '../../Constants.js';
 
 function App() {
@@ -34,9 +38,16 @@ function App() {
         <Route path="/projects">
           <Projects />
         </Route>
-        <Route path="/security">
-          <SecurityAuth />
+        <Route path="/hub">
+          <WebsiteAuth><Hub /></WebsiteAuth>
         </Route>
+        <Route path="hub/security">
+          <WebsiteAuth><Security /></WebsiteAuth>
+        </Route>
+        <Route path="hub/storage">
+          <WebsiteAuth><Storage /></WebsiteAuth>
+        </Route>
+
         <Route path="/">
           <Resume />
         </Route>
