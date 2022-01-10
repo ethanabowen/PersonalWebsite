@@ -40,12 +40,5 @@
       }
     }
   },
-  "storage": {
-    "personalwebsitedd0e9892": {
-      "service": "S3",
-      "serviceType": "imported",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": []
-    }
-  }
+  "storage": {}
 }

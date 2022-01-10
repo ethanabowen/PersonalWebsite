@@ -20,16 +20,6 @@
       },
       "auth": {
         "PersonalWebsite": {}
-      },
-      "storage": {
-        "personalwebsite2c6489c7": {
-          "bucketName": "bowen-storage",
-          "region": "us-east-1"
-        },
-        "personalwebsitedd0e9892": {
-          "bucketName": "bowen-storage",
-          "region": "us-east-1"
-        }
       }
     }
   }
