@@ -16,8 +16,8 @@ const awsmobile = {
             "profile",
             "aws.cognito.signin.user.admin"
         ],
-        "redirectSignIn": "https://www.ethanabowen.com/hub,http://localhost:3000/hub",
-        "redirectSignOut": "https://www.ethanabowen.com/hub,http://localhost:3000/hub",
+        "redirectSignIn": "https://www.ethanabowen.com/hub",
+        "redirectSignOut": "https://www.ethanabowen.com/hub",
         "responseType": "code"
     },
     "federationTarget": "COGNITO_USER_POOLS",

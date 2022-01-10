@@ -1,10 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import Amplify, { Auth } from 'aws-amplify';
+import Amplify, { Auth, Storage } from 'aws-amplify';
 import awsconfig from '../../aws-exports';
 
 // one time configuration for authentication
 if (!Amplify.Auth.userPool) {
     Amplify.configure(awsconfig);
+    Amplify.configure(
+        {
+            Storage: {
+                bucket: 'bowen-storage',
+                region: 'us-east-1',
+            }
+        }
+    )
 }
 
 /* Security page is locked down to a very specific set of allowed users with backend logic */
