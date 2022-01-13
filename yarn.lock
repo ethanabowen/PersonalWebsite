@@ -8801,7 +8801,7 @@
   "resolved" "https://registry.npmjs.org/commander/-/commander-3.0.2.tgz"
   "version" "3.0.2"
 
-"commander@^4.1.1":
+"commander@^4.0.0", "commander@^4.1.1":
   "integrity" "sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA=="
   "resolved" "https://registry.npmjs.org/commander/-/commander-4.1.1.tgz"
   "version" "4.1.1"
@@ -10163,6 +10163,14 @@
   "integrity" "sha512-hCx1oky9PFrJ611mf0ifBLBRW8lUUVRlFolb5gWRfIELabBlbp9xZvrqZLZAs+NxFnbfQoeGd8wDkygjg7U85w=="
   "resolved" "https://registry.npmjs.org/entities/-/entities-2.1.0.tgz"
   "version" "2.1.0"
+
+"env-cmd@^10.1.0":
+  "integrity" "sha512-mMdWTT9XKN7yNth/6N6g2GuKuJTsKMDHlQFUDacb/heQRRWOTIZ42t1rMHnQu4jYxU1ajdTeJM+9eEETlqToMA=="
+  "resolved" "https://registry.npmjs.org/env-cmd/-/env-cmd-10.1.0.tgz"
+  "version" "10.1.0"
+  dependencies:
+    "commander" "^4.0.0"
+    "cross-spawn" "^7.0.0"
 
 "env-editor@^0.5.0":
   "integrity" "sha512-ig2BZVD0/9p4NsPvFJIXu3EbXrgjHgRmhRkKKflx8jlZoADhD2O6rf6wCy0vZ56HnmrQTimR/oN4s34pMt5CAw=="

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import './App.css';
 import { Navbar, Nav } from 'react-bootstrap';
@@ -7,8 +7,6 @@ import { Navbar, Nav } from 'react-bootstrap';
 import Resume from '../Resume/Resume';
 import Projects from '../Projects/Projects';
 import Hub from '../Hub/Hub';
-import Security from '../Security/Security';
-import Storage from '../Storage/Storage';
 import WebsiteAuth from '../WebsiteAuth/WebsiteAuth';
 
 import { welcome } from '../../Constants.js';
@@ -41,13 +39,6 @@ function App() {
         <Route path="/hub">
           <WebsiteAuth><Hub /></WebsiteAuth>
         </Route>
-        <Route path="/hub/security">
-          <WebsiteAuth><Security /></WebsiteAuth>
-        </Route>
-        <Route path="/hub/storage">
-          <WebsiteAuth><Storage /></WebsiteAuth>
-        </Route>
-
         <Route path="/">
           <Resume />
         </Route>

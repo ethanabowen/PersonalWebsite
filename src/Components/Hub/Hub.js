@@ -1,11 +1,15 @@
 import React from 'react';
+import { Switch, Route } from "react-router-dom";
+import Security from '../Security/Security';
+import Storage from '../Storage/Storage';
 import './Hub.css';
 
 function Hub(props) {
   return (
     <div>
-      <a href="https://ethanbowen.com/hub/security">Security</a>
-      <a href="https://ethanbowen.com/hub/storage">Storage</a>
+      <Route exact path="/hub/security" component={Security} />
+      <Route exact path="/hub/storage" component={Storage} />
+      Yoho yoho
     </div>
   );
 }

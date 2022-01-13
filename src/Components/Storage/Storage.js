@@ -1,5 +1,4 @@
 import { Auth } from 'aws-amplify';
-import WebsiteAuth from '../WebsiteAuth/WebsiteAuth';
 
 function Storage(props) {
   return <>

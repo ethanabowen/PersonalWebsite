@@ -15,6 +15,7 @@
     "aws-amplify": "^3.0.18",
     "aws-sdk": "^2.1046.0",
     "bootstrap": "^4.5.0",
+    "env-cmd": "^10.1.0",
     "react": "^16.8.0",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.8.0",
@@ -27,7 +28,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:local": "env-cmd -e local npm run build",
+    "start:local": "env-cmd -e local npm run start",
+    "build:prod": "env-cmd -e prod npm run build",
+    "start:prod": "env-cmd -e prod npm run start"
   },
   "eslintConfig": {
     "extends": [
