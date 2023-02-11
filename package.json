@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@aws-amplify/cli": "^7.6.4",
+    "@aws-amplify/cli": "^10.7.1",
     "@aws-amplify/ui-react": "^0.2.9",
     "@fortawesome/fontawesome-svg-core": "^1.2.29",
     "@fortawesome/free-brands-svg-icons": "^5.13.1",
